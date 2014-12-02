@@ -1,0 +1,4 @@
+<layers>
+    <layer name="uwosh.customnav" 
+           interface="uwosh.customnav.browser.interfaces.IDropdownSpecific" />
+</layers>

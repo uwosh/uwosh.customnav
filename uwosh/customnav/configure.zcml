@@ -1,0 +1,29 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="uwosh.customnav">
+
+    <five:registerPackage package="." initialize=".initialize" />
+
+
+		<genericsetup:registerProfile
+	      name="default"
+	      title="uwosh.customnav"
+	      directory="profiles/default"
+	      description='Product that allows the creation of a custom, static dropdown'
+	      provides="Products.GenericSetup.interfaces.EXTENSION"
+	      />
+                <genericsetup:registerProfile
+              name="uninstall"
+              title="uwosh.customnav Uninstall Profile"
+              directory="profiles/uninstall"
+              description="Removes uwosh.customnav"
+              provides="Products.GenericSetup.interfaces.EXTENSION"
+              for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+              />
+	        <include package="plone.browserlayer" />
+		<include package=".browser" />
+		<cmf:registerDirectory name="dropdownmenu"/>
+</configure>

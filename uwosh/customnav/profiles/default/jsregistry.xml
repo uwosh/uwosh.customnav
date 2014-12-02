@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+ 	<javascript 
+		cacheable="True" compression="none" cookable="True"
+    	enabled="True" expression="python:'MSIE 6.0' in here.REQUEST['HTTP_USER_AGENT']" 
+		id="++resource++IE6hover.js" inline="False"
+	/>
+ 	<javascript 
+		cacheable="True" compression="none" cookable="True"
+    	enabled="True" expression="python:'MSIE 6.0' not in here.REQUEST['HTTP_USER_AGENT'] and 'MSIE 7.0' not in here.REQUEST['HTTP_USER_AGENT']" 
+		id="++resource++jazzyDropdownEffect.js" inline="False"
+	/>
+ 	<javascript 
+		cacheable="True" compression="none" cookable="True"
+    	enabled="True" expression="" 
+		id="++resource++autoSizeDropdown.js" inline="False"
+	/>
+
+</object>

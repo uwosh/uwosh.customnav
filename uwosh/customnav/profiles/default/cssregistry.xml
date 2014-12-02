@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- This file holds the setup configuration for the portal_css tool. -->
+
+<object name="portal_css">
+    <!-- To smoothly switch existing sites from browser resource
+         to stylesheet in skins/ folder -->
+    <stylesheet id="++resource++dropdown-menu.css" remove="True" />
+    <stylesheet id="++resource++MSIE6.css" remove="True" />
+    <stylesheet id="++resource++MSIE7.css" remove="True" />
+
+    <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+       enabled="1" expression="python:'MSIE 6.0' in here.REQUEST['HTTP_USER_AGENT']" id="MSIE6.css"
+       media="screen" rel="stylesheet" rendering="import"
+       insert-after="forms.css" />
+
+    <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+       enabled="1" expression="python:'MSIE 7.0' in here.REQUEST['HTTP_USER_AGENT']" id="MSIE7.css"
+       media="screen" rel="stylesheet" rendering="import"
+       insert-after="MSIE6.css" />
+ 
+    <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+       enabled="1" expression="python:'MSIE 6.0' not in here.REQUEST['HTTP_USER_AGENT'] and 'MSIE 7.0' not in here.REQUEST['HTTP_USER_AGENT']" id="dropdown-menu.css"
+       media="screen" rel="stylesheet" rendering="import"
+       insert-after="MSIE7.css" />
+
+
+</object>

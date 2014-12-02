@@ -1,0 +1,140 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+#portal-globalnav {
+position:relative;/*changed to absolute from relative*/
+z-index:30;
+}
+
+#portal-globalnav li{
+    float:left;
+    margin:0;
+    padding-right:auto;
+}
+
+#portal-globalnav li .submenu {
+display:none;
+width: 15em;
+z-index: 300;
+}
+
+#portal-globalnav li .submenu ul {
+width: 100%;   
+    
+}
+
+/*#portal-globalnav li .submenu .dropdownLinks {
+width: 33%;
+}*/
+
+.dropdownLinks .displayTitle {
+width: 100%;   
+}
+
+
+#portal-globalnav li .submenu ul li {
+    width:100%;
+    page-break-after:always;
+}
+    
+#portal-globalnav li .submenu ul li a{
+width: 104%;
+border: none;
+padding: 0;
+}
+
+#portal-globalnav li:hover .submenu,
+.submenu ul li:hover .submenu {
+position:absolute;
+display:block;
+background-color:black;
+z-index:300;
+width: auto;
+height: 200px;
+border: solid 1px;
+left: 23.9%;
+right: 0%;
+opacity: 0.88;
+filter:alpha(opacity=88);
+top: 100%;
+padding-top:5px;
+}
+
+.displayTitle {
+font-size: 1.36em;
+color: black;
+text-indent: 5px;
+}
+
+/*.dropdownHeader {
+font-size: 1.5em;
+}*/
+
+.dropdownHeader li a {
+text-align: left;  
+}
+
+.dropdownLinks {
+text-indent: 10px;
+vertical-align: top;
+text-align: left;
+width: 233px;
+}
+
+
+#post-sections-clear {
+    height:1px;
+    margin-bottom:-3px;
+}
+
+#portal-top ul#portal-globalnav {
+position:relative;
+background-image:URL(CobHeader2.jpg);
+float:left;
+padding-left:245px;
+z-index:3;
+width:674px!important;
+margin-left:11px!important;
+}
+#portal-top ul#portal-globalnav li a{
+color:ivory;
+border:none;
+padding-top:5px;
+padding-bottom:5px;
+float:left;
+text-transform: uppercase;
+}
+
+#portal-top ul#portal-globalnav li a.subItemsContent {
+
+text-transform: uppercase;
+color:#2a5e9a;
+font-weight:bold;
+}
+
+#uwosh_logo {
+z-index:4;   
+}
+
+.submenu tr {
+    width: 100%;
+}
+
+.submenu td{
+    width: 33%;
+}
+
+.submenu p {
+color:ivory;
+margin-top:2px;
+margin-bottom:4px;
+text-decoration:underline;
+}
+
+#columnThree ul li a {
+width: 94%;   
+}
+
+
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="uwosh.customnav"
+               version="1.7"
+               handler="uwosh.customnav.install.import_all"
+               title="uwosh.customnav: miscellaneous import steps">
+    Create a customNav folder
+  </import-step> 
+</import-steps>

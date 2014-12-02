@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<object remove="True">
+		<order manager="plone.portaltop" skinname="uwosh.theme.main">
+		  <viewlet name="plone.global_sections" insert-before="uwosh.theme.base.mainimage" />
+		</order>
+		<hidden manager="plone.portalheader" skinname="uwosh.theme.main">
+			<viewlet name="plone.global_sections" />
+		</hidden>
+</object>

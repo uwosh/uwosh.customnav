@@ -1,0 +1,30 @@
+<tal:tabs tal:condition="view/portal_tabs" i18n:domain="plone">
+	  <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+		<tal:tabs tal:repeat="tab view/portal_tabs">
+	  		<tal:isCustomNav tal:condition="python:view.isCustomNavTab(tab)>
+			<div id="customnav-wrapper">
+			<li tal:attributes="id string:portaltab-${tab/id};
+	                     tal:define="subitems python:view.getSubItems(tab);"></li><!--class python:view.selected_portal_tab==tab['id'] and 'selected' or 'plain'"-->
+			</div>
+	  		</tal:isCustomNav>
+		</tal:tabs>
+
+		  <!--for subitems in tab: iterate over and return titles for folders, links for links-->
+		  <tal:condition="subitems">
+		    <tal:repeat="item subitems">
+		    		      <tal:folders condition="item/object-type == 'display-title'>
+				      		   <div class="customNavHeader">
+						   <h3 tal:content="item/dropdown-title-name>CustomNav Header</h3>
+						   </div>
+
+				      <tal:links condition="item/object-type == 'link'>
+						   <div class="customNavLink">
+						   <a tal:content="item/link-title-name" 
+							tal:attributes="href item/link-url|nothing">Link</a>
+		    </tal:repeat>		
+					</tal:links>
+					</tal:folders>	
+		</tal:condition>	
+
+</tal:tabs>
+

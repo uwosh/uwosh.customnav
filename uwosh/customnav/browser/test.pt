@@ -1,0 +1,54 @@
+<tal:tabs tal:condition="view/portal_tabs"
+          i18n:domain="plone">
+    <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+    <div id="globalnav-wrapper">
+        <ul id="portal-globalnav">
+
+            <tal:tabs2 tal:repeat="tab view/portal_tabs">
+
+	    	       <li 
+                      tal:attributes="id string:portaltab-${tab/id};
+                                      class python:view.selected_portal_tab==tab['id'] and 'selected' or 'plain'">                                 
+                <a href=""  
+                   class="mainTabContent"
+                   tal:content="tab/name"
+                   tal:attributes="href tab/url;
+                                   title tab/description|nothing">
+                Tab Name
+                </a>
+ <tal:testBlock tal:define="subitems python:view.getSubItems(tab);">
+<span tal:replace="python:view.getSubItems(tab)"/>               
+<tal:block tal:condition="python:len(subitems) > 0">
+		    <ul class="submenu">
+
+			<tal:subitemstest tal:repeat="item subitems">
+				<tal:link tal:condition="python:item['object-type'] == 'link'">
+                		<li tal:attributes="id python:item['link-title-name']"><a href=""
+                                   class="subItemsContent"  
+                   		   tal:content="python:view.formatTitle(title = item['link-title-name'], level = item['level'])"
+                   		   tal:attributes="href item/link-url;
+                                                   title tab/description|nothing">Link</a></li>
+				</tal:link>
+				<tal:displayTitle tal:condition="python:item['object-type'] == 'display-title'">
+				<li tal:attributes="id python:item['dropdown-title-name']"><b><a href="" class="subItemsContent" 
+                   		   tal:content="python:view.formatTitle(title = item['dropdown-title-name'], level = item['level'])">Title</a></b></li>
+
+				</tal:displayTitle>
+
+			</tal:subitemstest>
+                   
+		    </ul>
+ </tal:block>
+ </tal:testBlock>               
+                </li></tal:tabs2>
+        </ul>
+
+        <div class="visualClear" id="post-sections-clear"><!-- --></div>
+    </div>
+
+
+
+
+
+</tal:tabs>
+

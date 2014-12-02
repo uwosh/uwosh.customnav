@@ -1,0 +1,160 @@
+#portal-globalnav {
+position:relative;/*changed to absolute from relative*/
+z-index:30;
+}
+
+#portal-globalnav li{
+    float:left;
+    margin:0;
+
+}
+
+#portal-globalnav li .submenu {
+position:absolute;
+display:none;
+background-color:black;
+z-index:300;
+width: 700px;!important
+height: 20.8em;
+border: solid 1px;
+left: 23.9%;
+opacity: .88;
+filter:alpha(opacity=88);
+top: 100%;
+padding-top:5px;
+}
+
+
+.dropdownLinks .displayTitle {
+width: 100%;  
+margin:0px;
+padding:0px;
+}
+
+#portal-globalnav li .submenu ul li {
+    width:100%;
+    page-break-after:always;
+}
+    
+#portal-globalnav li .submenu ul li a{
+width: 104%;
+border: none;
+padding: 0;
+}
+/*.submenu ul li:hover table.submenu {
+position:absolute;
+display:block;
+background-color:black;
+z-index:300;
+width: 700px;!important
+height: 20.8em;
+border: solid 1px;
+left: 23.9%;
+opacity: 0.72;
+filter:alpha(opacity=72);
+top: 100%;
+padding-top:5px;
+}*/
+    
+
+.displayTitle {
+font-size: 1.36em;
+color: black;
+text-indent: 5px;
+}
+
+.dropdownHeader {
+font-size: 1.5em;
+margin:0px;
+padding:0px;
+}
+
+.dropdownHeader li a {
+text-align: left;  
+}
+
+.dropdownLinks, .dropdownLinks li, .dropdownLinks li a{
+
+vertical-align: top;
+text-align: left;
+width: 80%;
+color: white;
+left: -15%;   
+}
+
+.dropdownLinks li a {
+text-indent: 20px;   
+}
+
+.dropdownLinks li p {
+left: -15%;
+border: none;
+text-indent: 10px;
+
+    
+}
+
+/*
+#portal-globalnav li .submenu .dropdownLinks {
+width: 500px;
+padding:0px;
+margin:0px;
+}*/
+
+#portal-top ul#portal-globalnav {
+position:relative;
+background-image:URL(CobHeader2.jpg);
+float:left;
+padding-left:245px;
+z-index:1;
+width:674px!important;
+margin-left:5px!important;
+}
+#portal-top ul#portal-globalnav li a{
+color:ivory;
+border:none;
+padding-top:5px;
+padding-bottom:5px;
+float:left;
+text-transform: uppercase;
+
+}
+
+#portal-top ul#portal-globalnav li a.subItemsContent {
+
+text-transform: uppercase;
+color:#2a5e9a;
+font-weight:bold;
+}
+
+ul#portal-globalnav {
+ margin-left: 5px;!important   
+}
+
+.submenu td {
+width: 33%;!important
+
+}
+
+.submenu tr {
+    width: 100%;
+    vertical-align: top;
+text-align: left;
+}
+
+#uwosh_banner_body {
+z-index:30000;!important  
+    
+}
+
+.submenu p {
+color:ivory;
+margin-top:2px;
+margin-bottom:4px;
+text-decoration:underline;
+}
+
+
+#columnThree ul li a {
+width: 94%;   
+}

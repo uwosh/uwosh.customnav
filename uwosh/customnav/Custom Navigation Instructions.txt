@@ -1,0 +1,40 @@
+Custom Navigation Builder allows you to create dropdown menus by simply adding folders and links to the 'Custom Navigation Folder'.
+
+ 
+To Create a Dropdown Tab
+---------------------
+
+-Simply place a folder in the root of the Custom Navigation Folder
+
+NOTE: Other object types placed in the root of the Custom Navigation Folder will be ignored
+
+
+To Add Items to Your Dropdown Tab
+-----------------------------
+
+-Simply place a folder or link within the folder you made to represent your dropdown tab
+
+-Folders will be rendered as headers and will link to the folder itself and are used as a way to structure your dropdown
+
+-Links will render as links to the link's defined URL
+
+-Within folders as many layers of folders and links as you want can be embedded
+
+-For organizational purposes it is best to place folders on level 2 of the Custom Navigation Folder(CNF) and links on level 3 of the CNF within the appropriate header
+
+NOTE: Other object types placed in any subfolder will be ignored
+
+
+Link the Dropdown Tab to a Page
+--------------------------
+-Add the the url of where the dropdown tab is supposed to link to within the following tag <tablink></tablink> in the description section of the folder representing the dropdown tab
+
+Example: <tablink>http://www.uwosh.edu/plone</tablink>
+
+ 
+To Finalize Your Dropdown Tabs with Items
+----------------------------------
+
+-Simply click on the 'Create Dropdown' button in the actions dropdown in upper right corner of the Custom Navigation Folder
+
+NOTE: For any changes to the Custom Navigation Folder to take affect, you must click the 'Create Dropdown' button in the actions button within the Custom Navigation Folder

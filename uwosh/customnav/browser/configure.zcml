@@ -1,0 +1,59 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="uwosh.customnav"> 
+
+    <!-- Override global sections viewlet -->
+    <browser:viewlet
+	name="plone.global_sections"
+	manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+	class=".dropdown.CustomNavDropdownViewlet"
+	layer=".interfaces.IDropdownSpecific"
+	permission="zope2.View"
+	/>
+
+    <browser:page
+	name="getNavStructure"
+	class=".customNavResults.NavigationView"
+	for="*"
+	permission="zope.Public"
+	attribute="getNavigation"
+	/>
+
+    <browser:page
+	name="createPortalTabs"
+	class=".customNavResults.NavigationView"
+	for="*"
+	permission="zope.Public"
+	attribute="createPortalTabs"
+	/>
+
+    <browser:page
+	name="dropdowns"
+	class=".customNavResults.NavigationView"
+	for="*"
+	permission="zope.Public"
+	attribute="returnBrowser"
+	/>
+
+    <browser:resource
+	file="IE6hover.js"
+	name="IE6hover.js"
+	layer=".interfaces.IDropdownSpecific"
+	/>
+
+    <browser:resource
+	file="jazzyDropdownEffect.js"
+	name="jazzyDropdownEffect.js"
+	layer=".interfaces.IDropdownSpecific"
+	/>
+
+    <browser:resource
+	file="autoSizeDropdown.js"
+	name="autoSizeDropdown.js"
+	layer=".interfaces.IDropdownSpecific"
+	/>
+
+
+
+</configure>

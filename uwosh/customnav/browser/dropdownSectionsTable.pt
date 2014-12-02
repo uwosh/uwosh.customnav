@@ -1,0 +1,109 @@
+<tal:tabs tal:condition="view/portal_tabs"
+          i18n:domain="plone">
+    <h5 class="hiddenStructure" i18n:translate="heading_sections">Sections</h5>
+    <div id="globalnav-wrapper">
+        <ul id="portal-globalnav">
+            <tal:tabs2 tal:repeat="tab view/portal_tabs"><tal:isCNTab tal:condition="python:view.isCustomNavTab(tab) == 1"> <li 
+                      tal:attributes="id string:portaltab-${tab/id};
+                                      class python:view.selected_portal_tab==tab['id'] and 'selected' or 'plain'"
+                      tal:define="subitems python:view.getSubItems(tab);">                                 
+                <a href=""  
+                   class="mainTabContent"
+                   tal:content="tab/name"
+                   tal:attributes="href tab/url;
+                                   title tab/description|nothing">
+                Tab Name
+                </a>
+               
+<tal:block tal:condition="python:len(subitems) > 0">
+                    <table class="submenu">
+<!--<tr><td colspan="3"><ul class="dropdownHeader"><li><a tal:content="tab/name">Dropdown Header</a></li></ul></td></tr>-->
+
+                     <tr>
+                     
+<td id="columnOne">
+<ul class="dropdownLinks">
+			<tal:getItems tal:repeat="item subitems">
+                        <tal:getIndex tal:define="index python:view.getItemIndex(item, subitems)">
+                        <tal:columnOne tal:condition="python:index < 7">
+                                
+				<tal:link tal:condition="python:item['object-type'] == 'link'">
+                		<li tal:attributes="id python:item['link-title-name']"><a href=""
+                                   class="subItemsContent"  
+                   		   tal:content="python:view.formatTitle(title = item['link-title-name'], level = item['level'])"
+                   		   tal:attributes="href item/link-url;
+                                                   title tab/description|nothing">Link</a></li>
+				</tal:link>
+				<tal:displayTitle tal:condition="python:item['object-type'] == 'display-title'">
+				<li tal:attributes="id python:item['dropdown-title-name']" class="displayTitle"><b><p class="subItemsContent" 
+                   		   tal:content="python:view.formatTitle(title = item['dropdown-title-name'], level = item['level'])">Title</p></b></li>
+
+				</tal:displayTitle>
+                        </tal:columnOne>
+                        </tal:getIndex>
+                        </tal:getItems>
+</ul>
+
+</td>
+<td id="columnTwo">
+<ul class="dropdownLinks">
+			<tal:getItems tal:repeat="item subitems">
+                        <tal:getIndex tal:define="index python:view.getItemIndex(item, subitems)">
+                        <tal:columnTwo tal:condition="python:index > 6 and index < 14">
+                                
+				<tal:link tal:condition="python:item['object-type'] == 'link'">
+                		<li tal:attributes="id python:item['link-title-name']"><a href=""
+                                   class="subItemsContent"  
+                   		   tal:content="python:view.formatTitle(title = item['link-title-name'], level = item['level'])"
+                   		   tal:attributes="href item/link-url;
+                                                   title tab/description|nothing">Link</a></li>
+				</tal:link>
+				<tal:displayTitle tal:condition="python:item['object-type'] == 'display-title'">
+				<li tal:attributes="id python:item['dropdown-title-name']" class="displayTitle"><b><p class="subItemsContent" 
+                   		   tal:content="python:view.formatTitle(title = item['dropdown-title-name'], level = item['level'])">Title</p></b></li>
+
+				</tal:displayTitle>
+                        </tal:columnTwo>
+                        </tal:getIndex>
+                        </tal:getItems>
+</ul>
+
+</td>
+<td id="columnThree">
+<ul class="dropdownLinks">
+			<tal:getItems tal:repeat="item subitems">
+                        <tal:getIndex tal:define="index python:view.getItemIndex(item, subitems)">
+                        <tal:columnThree tal:condition="python:index > 13">
+                                
+				<tal:link tal:condition="python:item['object-type'] == 'link'">
+                		<li tal:attributes="id python:item['link-title-name']"><a href=""
+                                   class="subItemsContent"  
+                   		   tal:content="python:view.formatTitle(title = item['link-title-name'], level = item['level'])"
+                   		   tal:attributes="href item/link-url;
+                                                   title tab/description|nothing">Link</a></li>
+				</tal:link>
+				<tal:displayTitle tal:condition="python:item['object-type'] == 'display-title'">
+				<li tal:attributes="id python:item['dropdown-title-name']" class="displayTitle"><b><p class="subItemsContent" 
+                   		   tal:content="python:view.formatTitle(title = item['dropdown-title-name'], level = item['level'])">Title</p></b></li>
+
+				</tal:displayTitle>
+                        </tal:columnThree>
+                        </tal:getIndex>
+                        </tal:getItems>
+</ul>
+
+</td>
+
+                       </tr>
+
+
+		    </table>      
+</tal:block>          
+                </li></tal:isCNTab>
+
+</tal:tabs2>
+        </ul>
+        <div class="visualClear" id="post-sections-clear"><!-- --></div>
+    </div>
+</tal:tabs>
+

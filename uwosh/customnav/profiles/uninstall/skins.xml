@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+   
+ <object name="dropdownmenu" meta_type="Filesystem Directory View"
+    directory="uwosh.customnav:skins/dropdownmenu" remove="True" />
+    
+ <skin-path name="*">
+  <layer name="dropdownmenu"/>
+ </skin-path>
+ 
+</object>
